@@ -17,32 +17,22 @@ router.post("/", withAuth, async (req, res) => {
   }
 });
 
-//Edits a blog post
-router.put("/:id", withAuth, (req, res) => {
-  Post.update(
-    {
-      postTitle: req.body.postTitle,
-      postBody: req.body.postBody,
-    },
-    {
-      where: {
-        id: req.params.id,
-      },
-    }
-  )
-    .then((editPost) => {
-      if (!editPost) {
-        res
-          .status(404)
-          .json({ message: "Please select a post with a valid id" });
-        return;
-      }
-      res.json(editPost);
-    })
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
+//GETS a blog post by ID
+router.get("/:id", async (req, res) => {
+  try {
+    const postID = await Post.findOne({
+      where: { id: req.params.id },
     });
+    const renderpostID = postID.get({ plain: true });
+
+    res.render("editPost", {
+      renderpostID,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    console.log(err);
+    res.send(err);
+  }
 });
 
 //Deletes a blog post

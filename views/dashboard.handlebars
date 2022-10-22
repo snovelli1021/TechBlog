@@ -18,9 +18,16 @@
 {{#each posts}}
 <h2>{{postTitle}}</h2>
 <p>{{postBody}}</p>
+<p>{{commentBody}}</p>
+<form class="newComment-form">
+<label for="commentBody">New Comment:</label>
+<input class="comment-input" type="text" id="commentBody"/>
+</form>
+
+<button class="btn btn-primary" type="submit">Add Comment</button>
 <div>
-    <button class="btn btn-primary" type="submit">Edit!</button>
-    <button class="btn btn-primary" type="submit">Delete!</button>
+    <button class="btn btn-primary" type="submit">Edit Post</button>
+    <button class="btn btn-primary" type="submit">Delete Post</button>
 </div>
 {{/each}}
 

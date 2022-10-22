@@ -15,7 +15,7 @@ const postFormHandler = async (event) => {
     if (response.ok) {
       document.location.replace("/dashboard");
     } else {
-      alert("Failed to create post");
+      alert("Adding a new post failed.");
     }
   }
 };
@@ -23,32 +23,6 @@ const postFormHandler = async (event) => {
 document
   .querySelector(".post-form")
   .addEventListener("submit", postFormHandler);
-
-//Handler used to edit a post
-const editPostHandler = async (event) => {
-  event.preventDefault();
-
-  const postNumber = specificId.innerHTML;
-  const postTitle = document.querySelector("#post-title").value.trim();
-  const postBody = document.querySelector("#post-body").value.trim();
-
-  if (postTitle && postBody) {
-    const response = await fetch(`/api/posts/${postNumber}`, {
-      method: "PUT",
-      body: JSON.stringify({ postTitle, postBody }),
-      headers: { "Content-Type": "application/json" },
-      credentials: "include",
-    });
-
-    if (response.ok) {
-      document.location.replace("/dashboard");
-    } else {
-      alert("Editing your post has failed.");
-    }
-  }
-};
-
-document.querySelector(".post-form").addEventListener("edit", editPostHandler);
 
 //Handler used to delete a post
 const deletePostHandler = async (event) => {

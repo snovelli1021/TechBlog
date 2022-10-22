@@ -1,0 +1,11 @@
+* {
+  background-color: grey;
+}
+
+.btn {
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  border-color: white;
+  margin-bottom: 1%;
+}

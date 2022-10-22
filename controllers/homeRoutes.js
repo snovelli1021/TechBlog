@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Post } = require("../models");
+const { User, Post, Comment } = require("../models");
 const withAuth = require("../utils/auth");
 
 router.get("/", async (req, res) => {
@@ -37,6 +37,25 @@ router.get("/dashboard", withAuth, async (req, res) => {
     const posts = postData.map((post) => post.get({ plain: true }));
     res.render("dashboard", { posts });
   } catch (error) {}
+});
+
+router.post("/dashboard", withAuth, async (req, res) => {
+  try {
+    const commentData = await Comment.create({
+      commentBody: req.body.commentBody,
+      userId: req.session.user_id,
+      commentPostId: req.body.postNumber,
+    });
+
+    req.session.save(() => {
+      req.session.loggedIn = true;
+
+      res.status(200).json(commentData);
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
 });
 
 module.exports = router;
