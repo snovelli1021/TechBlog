@@ -2,10 +2,15 @@
   background-color: grey;
 }
 
+h2 {
+  color: aqua;
+}
+
 .btn {
   background-color: blue;
   color: white;
   border-radius: 5px;
   border-color: white;
   margin-bottom: 1%;
+  margin-top: 1%;
 }

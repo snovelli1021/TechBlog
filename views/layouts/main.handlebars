@@ -13,11 +13,7 @@
     <h1>
      Tech Blog
     </h1>
-    {{#if logged_in}}
-    <nav>
-      <button class="btn" id="logout">logout</button>
-    </nav>
-    {{/if}}
+      
   </header>
   <main class="container container-fluid mt-5">
     {{{ body }}}
@@ -28,6 +24,7 @@
 
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
+  <script src="/js/login.js"></script>
   {{/if}}
 </body>
 

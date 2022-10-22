@@ -2,13 +2,12 @@
 const newCommentHandler = async (event) => {
   event.preventDefault();
   console.log("hello");
-  const commentNumber = specificId.innerHTML;
   const commentBody = document.getElementById("commentBody").value;
 
-  if (commentNumber && commentBody) {
+  if (commentBody) {
     const response = await fetch("/api/comments", {
       method: "POST",
-      body: JSON.stringify({ commentBody, commentNumber }),
+      body: JSON.stringify({ commentBody }),
       headers: { "Content-Type": "application/json" },
     });
 

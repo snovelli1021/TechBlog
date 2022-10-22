@@ -20,15 +20,6 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/login", (req, res) => {
-  if (req.session.logged_in) {
-    res.redirect("/");
-    return;
-  }
-
-  res.render("login");
-});
-
 router.get("/dashboard", withAuth, async (req, res) => {
   try {
     const postData = await Post.findAll({
@@ -39,12 +30,10 @@ router.get("/dashboard", withAuth, async (req, res) => {
   } catch (error) {}
 });
 
-router.post("/dashboard", withAuth, async (req, res) => {
+router.get("/dashboard", withAuth, async (req, res) => {
   try {
-    const commentData = await Comment.create({
+    const commentData = await Comment.findAll({
       commentBody: req.body.commentBody,
-      userId: req.session.user_id,
-      commentPostId: req.body.postNumber,
     });
 
     req.session.save(() => {
