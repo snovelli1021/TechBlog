@@ -14,7 +14,7 @@
         <input class="form-input" type="text" id="post-body"/>
      </div>  
     <div>
-        <button class="btn btn-primary" type="submit">Create Post!</button>
+        <button class="createPostBtn" type="submit">Create Post!</button>
     </div>
     
 </form>
@@ -23,15 +23,15 @@
 <h2>{{postTitle}}</h2>
 <p>{{postBody}}</p>
 <div>
-    <button class="btn btn-primary" type="submit">Delete Post</button>
+    <button class="deletePostBtn" type="submit">Delete Post</button>
 </div>
 <form class="newComment-form">
     <label for="commentBody">New Comment:</label>
     <input class="comment-input" type="text" id="commentBody"/>
 </form>
 
-<button class="btn btn-primary" type="submit">Add Comment</button>
-<button class="btn btn-primary" type="submit">Delete Comment</button>
+<button class="addCommentBtn" type="submit">Add Comment</button>
+<button class="deleteCommentBtn" type="submit">Delete Comment</button>
 {{/each}}
 
 <script src="./js/post.js"></script>

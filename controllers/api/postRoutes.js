@@ -17,21 +17,23 @@ router.post("/", withAuth, async (req, res) => {
   }
 });
 
-//GETS a blog post by ID
-router.get("/:id", async (req, res) => {
+//Deletes a blog post
+router.delete("/:id", withAuth, async (req, res) => {
   try {
-    const postID = await Post.findOne({
-      where: { id: req.params.id },
+    const deletePost = await Post.destroy({
+      where: {
+        id: req.params.id,
+      },
     });
-    const renderpostID = postID.get({ plain: true });
-
-    res.render("editPost", {
-      renderpostID,
-      logged_in: req.session.logged_in,
-    });
-  } catch (err) {
-    console.log(err);
-    res.send(err);
+    if (!deletePost) {
+      res
+        .status(404)
+        .json({ message: "Please select a post with a valid Id." });
+      return;
+    }
+    res.status(200).json(deletePost);
+  } catch (error) {
+    res.status(500).json(err);
   }
 });
 
@@ -46,7 +48,7 @@ router.delete("/:id", withAuth, async (req, res) => {
     if (!deletePost) {
       res
         .status(404)
-        .json({ message: "Please select a post with a valid Id." });
+        .json({ message: "Please select a blog post with a valid Id." });
       return;
     }
     res.status(200).json(deletePost);

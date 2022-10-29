@@ -20,17 +20,22 @@ const newCommentHandler = async (event) => {
 };
 
 document
-  .querySelector(".newComment-form")
+  .querySelector(".addCommentBtn")
   .addEventListener("submit", newCommentHandler);
 
 //Handler used to delete a comment
 const deleteCommentHandler = async (event) => {
   event.preventDefault();
 
-  const commentNumber = specificId.innerHTML;
+  const id = window.location.toString().split("/")[
+    window.location.toString().split("/").length - 1
+  ];
 
-  const response = await fetch(`/api/comments/${commentNumber}`, {
+  const response = await fetch(`/api/comments/${id}`, {
     method: "DELETE",
+    body: JSON.stringify({
+      comment_id: id,
+    }),
     headers: {
       "Content-Type": "application/json",
     },
@@ -44,5 +49,5 @@ const deleteCommentHandler = async (event) => {
 };
 
 document
-  .querySelector(".newComment-form")
+  .querySelector(".commentDeleteBtn")
   .addEventListener("delete", deleteCommentHandler);
