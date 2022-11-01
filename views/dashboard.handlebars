@@ -19,20 +19,33 @@
     
 </form>
 
-{{#each posts}}
-<h2>{{postTitle}}</h2>
-<p>{{postBody}}</p>
-<div>
-    <button class="deletePostBtn" type="submit">Delete Post</button>
-</div>
-<form class="newComment-form">
-    <label for="commentBody">New Comment:</label>
-    <input class="comment-input" type="text" id="commentBody"/>
+{{#each posts as |post|}}
+<h2>{{post.postTitle}}</h2>
+<p>{{post.postBody}}</p>
+
+<form class="form2" data-id= "{{post.id}}">
+    
+    <div>
+        <button id="deletePostBtn" type="submit" >Delete Post!</button>
+    </div>
+    
 </form>
 
-<button class="addCommentBtn" type="submit">Add Comment</button>
-<button class="deleteCommentBtn" type="submit">Delete Comment</button>
+<form class="newComment-form" data-id= "{{post.id}}">
+    <label for="commentBody">New Comment:</label>
+    <input class="comment-input" type="text" id="commentBody"/>
+    <button class="addCommentBtn" type="submit">Add Comment</button>
+</form>
 {{/each}}
+
+
+{{#each comments as |comment|}}
+<p>{{comment.commentBody}}</p>
+<form class="deleteComment" data-id= "{{comment.id}}">
+     <button class="commentDeleteBtn" type="submit">Delete Comment</button>
+</form>
+{{/each}}
+
 
 <script src="./js/post.js"></script>
 <script src="./js/comment.js"></script>

@@ -23,32 +23,13 @@ router.delete("/:id", withAuth, async (req, res) => {
     const deletePost = await Post.destroy({
       where: {
         id: req.params.id,
+        userId: req.session.user_id,
       },
     });
     if (!deletePost) {
       res
         .status(404)
         .json({ message: "Please select a post with a valid Id." });
-      return;
-    }
-    res.status(200).json(deletePost);
-  } catch (error) {
-    res.status(500).json(err);
-  }
-});
-
-//Deletes a blog post
-router.delete("/:id", withAuth, async (req, res) => {
-  try {
-    const deletePost = await Post.destroy({
-      where: {
-        id: req.params.id,
-      },
-    });
-    if (!deletePost) {
-      res
-        .status(404)
-        .json({ message: "Please select a blog post with a valid Id." });
       return;
     }
     res.status(200).json(deletePost);

@@ -20,22 +20,16 @@ const postFormHandler = async (event) => {
   }
 };
 
-document
-  .querySelector(".createPostBtn")
-  .addEventListener("submit", postFormHandler);
-
 //Handler used to delete a post
 const deletePostHandler = async (event) => {
   event.preventDefault();
-
-  const id = window.location.toString().split("/")[
-    window.location.toString().split("/").length - 1
-  ];
-
+  console.log(event.target.getAttribute("data-id"));
+  const id = event.target.getAttribute("data-id");
+  console.log(id);
   const response = await fetch(`/api/posts/${id}`, {
     method: "DELETE",
     body: JSON.stringify({
-      post_id: id,
+      id: id,
     }),
     headers: {
       "Content-Type": "application/json",
@@ -50,5 +44,9 @@ const deletePostHandler = async (event) => {
 };
 
 document
-  .querySelector(".deletePostBtn")
-  .addEventListener("delete", deletePostHandler);
+  .querySelector(".post-form")
+  .addEventListener("submit", postFormHandler);
+
+document.querySelectorAll(".form2").forEach((item) => {
+  item.addEventListener("submit", deletePostHandler);
+});

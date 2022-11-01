@@ -18,7 +18,7 @@ router.post("/", withAuth, async (req, res) => {
     const comment = await Comment.create({
       commentBody: req.body.commentBody,
       userId: req.session.user_id,
-      post_id: req.body.post_id,
+      commentPostId: req.body.commentPostId,
     });
     res.json({ comment, message: "Your comment has been created." });
   } catch (error) {
