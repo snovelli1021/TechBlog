@@ -15,7 +15,7 @@
 The TechBlog application allows a user to create and delete blog posts and comments as long as they are signed in. The first time a user visits the TechBlog, they will need to create an account before they can sign in and begin to use the application.  
     
 ## Installation:
-You can find the TecchBlog available online and ready to use. Just click [here]("") and create your account today!
+You can find the TecchBlog available online and ready to use. Just click [here](https://stark-river-56287.herokuapp.com/) and create your account today!
     
 ## Usage:
 Visit  and you should be presented with the homepage. From here, you are given the option to sign up or log in. If you are a first time visitor and need to signup, enter the credentials you would like to use for your account and click on sign up. Once you are signed up you can log in and begin creating blogposts and comments.
