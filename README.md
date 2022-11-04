@@ -38,7 +38,7 @@ Stephen Novelli
 No tests are required.
     
 ## Preview:
-![Preview](./public/images/"".jpg)
+![Preview](./public/images/screenshot.jpg)
 
 ## Accreditations:
   TechBlog utilizes Handlebars.js as the primary templating language to change the application's page view. Express.js is used to build the server along with Node.js as the application framework. It is deployed for use publicly via Heroku.
