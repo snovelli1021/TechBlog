@@ -2,17 +2,16 @@ const router = require("express").Router();
 const { User, Post, Comment } = require("../models");
 const withAuth = require("../utils/auth");
 
+//Gets all the post data.
 router.get("/", async (req, res) => {
   try {
     const postData = await Post.findAll({
       include: [
         {
           model: User,
-          attributes: ["username"],
+          attributes: ["email"],
         },
       ],
-    }).catch((err) => {
-      res.json(err);
     });
     const posts = postData.map((post) => post.get({ plain: true }));
     console.log(posts);
@@ -25,6 +24,7 @@ router.get("/", async (req, res) => {
   }
 });
 
+//Displays the post and comment data on the dashboard.
 router.get("/dashboard", withAuth, async (req, res) => {
   try {
     const postData = await Post.findAll({

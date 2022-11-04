@@ -2,8 +2,8 @@
 const newCommentHandler = async (event) => {
   event.preventDefault();
   console.log("hello");
-  const commentBody = document.getElementById("commentBody").value;
   const id = event.target.getAttribute("data-id");
+  const commentBody = document.getElementById(`commentBody${id}`).value;
 
   if (commentBody) {
     const response = await fetch("/api/comments", {
@@ -42,9 +42,9 @@ const deleteCommentHandler = async (event) => {
   }
 };
 
-document
-  .querySelector(".newComment-form")
-  .addEventListener("submit", newCommentHandler);
+document.querySelectorAll(".newComment-form").forEach((item) => {
+  item.addEventListener("submit", newCommentHandler);
+});
 
 document.querySelectorAll(".deleteComment").forEach((item) => {
   item.addEventListener("submit", deleteCommentHandler);

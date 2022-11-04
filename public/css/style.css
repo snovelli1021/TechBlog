@@ -14,3 +14,39 @@ h2 {
   margin-bottom: 1%;
   margin-top: 1%;
 }
+
+.createPostBtn {
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  border-color: white;
+  margin-bottom: 1%;
+  margin-top: 1%;
+}
+
+#deletePostBtn {
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  border-color: white;
+  margin-bottom: 1%;
+  margin-top: 1%;
+}
+
+.addCommentBtn {
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  border-color: white;
+  margin-bottom: 1%;
+  margin-top: 1%;
+}
+
+.commentDeleteBtn {
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  border-color: white;
+  margin-bottom: 1%;
+  margin-top: 1%;
+}

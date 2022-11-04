@@ -33,7 +33,7 @@
 
 <form class="newComment-form" data-id= "{{post.id}}">
     <label for="commentBody">New Comment:</label>
-    <input class="comment-input" type="text" id="commentBody"/>
+    <input class="comment-input" type="text" id="commentBody{{post.id}}"/>
     <button class="addCommentBtn" type="submit">Add Comment</button>
 </form>
 {{/each}}
@@ -47,5 +47,5 @@
 {{/each}}
 
 
-<script src="./js/post.js"></script>
-<script src="./js/comment.js"></script>
+<script src="../js/post.js"></script>
+<script src="../js/comment.js"></script>
