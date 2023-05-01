@@ -1,52 +1,116 @@
 * {
-  background-color: grey;
+  background-color: #1d2538;
+}
+
+h1 {
+  color: #e0e1dc;
 }
 
 h2 {
-  color: aqua;
+  color: #e0e1dc;
 }
 
 .btn {
-  background-color: blue;
-  color: white;
-  border-radius: 5px;
-  border-color: white;
+  background-color: #7c8da5;
+  border-color: #e0e1dc;
+  border-radius: 50px;
+  color: #1d2538;
   margin-bottom: 1%;
   margin-top: 1%;
+  font-size: 20px;
+  height: 60px;
+  width: 80px;
 }
 
 .createPostBtn {
-  background-color: blue;
-  color: white;
+  background-color: #7c8da5;
+  border-color: #e0e1dc;
   border-radius: 5px;
-  border-color: white;
+  color: #1d2538;
   margin-bottom: 1%;
   margin-top: 1%;
 }
 
 #deletePostBtn {
-  background-color: blue;
-  color: white;
+  background-color: #7c8da5;
+  border-color: #e0e1dc;
   border-radius: 5px;
-  border-color: white;
+  color: #1d2538;
   margin-bottom: 1%;
   margin-top: 1%;
 }
 
 .addCommentBtn {
-  background-color: blue;
-  color: white;
+  background-color: #7c8da5;
+  border-color: #e0e1dc;
   border-radius: 5px;
-  border-color: white;
+  color: #1d2538;
   margin-bottom: 1%;
   margin-top: 1%;
 }
 
 .commentDeleteBtn {
-  background-color: blue;
-  color: white;
+  background-color: #7c8da5;
+  border-color: #e0e1dc;
   border-radius: 5px;
-  border-color: white;
+  color: #1d2538;
   margin-bottom: 1%;
   margin-top: 1%;
+}
+
+.row {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.column {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  background: none;
+  justify-content: center;
+  justify-content: space-between;
+  display: flex;
+  border-style: solid;
+  border-color: #475b74;
+  border-radius: 50%;
+  /* Original is 3% if I can't figure out button position */
+  padding: 5%;
+}
+
+.form.login-form {
+  color: #e0e1dc;
+  font-size: 24px;
+}
+
+.form.signup-form {
+  color: #e0e1dc;
+  font-size: 24px;
+}
+.form-input {
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+  padding: 1%;
+  height: 32px;
+  width: 100%;
+  display: flex;
+  border-radius: 5px;
+  margin-bottom: 4%;
+  text-align: top;
+  word-wrap: break-word;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10%;
+  margin-top: 5%;
 }
