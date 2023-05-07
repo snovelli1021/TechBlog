@@ -5,6 +5,7 @@
 <nav>
     <button class="btn" id="home">Home</button>
 </nav>
+<div class="postCard">
 <form class="form post-form">
     <div>
         <label for="post-title">Post Title:</label>
@@ -19,7 +20,7 @@
     </div>
     
 </form>
-
+</div>
 {{#each posts as |post|}}
 <h2>{{post.postTitle}}</h2>
 <p>{{post.postBody}}</p>

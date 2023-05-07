@@ -1,8 +1,18 @@
-/* Styling whole page color to help visually separate pages while coding. */
-* {
-  background-color: #419e6e;
-}
 /* Styling for dashboard page. */
+.postCard {
+  display: flex;
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+  border-style: solid;
+  border-color: #475b74;
+  border-radius: 50%;
+  padding: 8%;
+  border-left-color: #e0e1dc;
+  z-index: 1100;
+}
+
 .createPostBtn {
   background-color: #7c8da5;
   border-color: #e0e1dc;

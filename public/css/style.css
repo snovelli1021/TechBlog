@@ -7,9 +7,37 @@ p {
   color: aliceblue;
 }
 
-#title {
-  font-size: 64px;
+.navbar {
+  position: sticky;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  top: 0;
+  width: 100%;
+  z-index: 1100;
+  background-color: #1d2538;
 }
-#login {
-  font-size: 64px;
+
+#title {
+  font-size: 56px;
+  color: #e0e1dc;
+}
+.navLinks {
+  font-size: 24px;
+  color: #e0e1dc;
+  justify-content: space-between;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.navLinks:hover {
+  color: #7c8da5;
+}
+
+footer {
+  color: #e0e1dc;
+  position: sticky;
+  text-align: center;
+  margin-top: 2%;
+  padding: 0.25%;
 }

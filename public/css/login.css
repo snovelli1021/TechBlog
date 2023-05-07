@@ -1,6 +1,4 @@
-* {
-  background-color: #1d2538;
-}
+/* Styling for login page. */
 
 h1 {
   color: #e0e1dc;
@@ -10,7 +8,6 @@ h2 {
   color: #e0e1dc;
 }
 
-/* Styling for homepage page. */
 .row {
   display: flex;
   margin-left: auto;

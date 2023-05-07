@@ -9,29 +9,41 @@
 </head>
 
 <body>
-  <header class="display-flex justify-space-between align-center p-2">
-  <h1 id="title">Welcome to the Tech Blog!</h1>
-<nav>
-  {{#if logged_in}}
-  <a href="/homepage"></a>
-  <button class="btn" id="logout">Logout</button>
-  <script src="/js/logout.js"></script>
-  {{else}}
-        <a id="login" href="/login">login</a>
-  {{/if}}
-</nav>
-</header>
-<main class="container container-fluid mt-5">
+  <header class="header">
+    
+      <nav class="navbar">
+        <h1 id="title">Welcome to the Tech Blog!</h1>
+        {{!-- <button class="btn" id="login">Login</button>
+        <button class="btn" id="logout">Logout</button> --}}
+        <a class="navLinks" id="login" href="/login">login</a>
+        <a class="navLinks" id="logout" href="/login">logout</a>
+        {{#if logged_in}}
+        <a href="/homepage"></a>
+        {{!-- <button class="btn" id="logout">Logout</button> --}}
+        <script src="/js/logout.js"></script>
+        {{else}}
+        
+          {{!-- <a id="login" href="/login">login</a>
+          <a id="login" href="/login">logout</a>
+          <script src="/js/logout.js"></script> --}}
+        {{/if}}
+      </nav>
+  </header>
+
+  <main class="container container-fluid mt-5">
     {{{ body }}}
-</main>
+  </main>
 
-<footer>
-      <p>footer</p>
-</footer>
+  <footer>
+    <div className="footer">
+      © 2023 Copyright: <p>Stephen Novelli 2023</p>
+    </div>
+  </footer>
 
-{{#if logged_in}}
-  <script src="/js/logout.js"></script>
+  {{#if logged_in}}
+    <script src="/js/logout.js"></script>
   {{/if}}
+  
 </body>
 
 </html>
