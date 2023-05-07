@@ -1,0 +1,60 @@
+<link rel="stylesheet" href="/css/login.css">
+<p>Please singup if you're a first time user, or log back into your existing account to continue posting.</p>
+
+<div class="row">
+  <div class="column">
+<div class="card">
+<form class="form login-form">
+  <div class="form-group">
+    <div class="form-group">
+    <label for="password-signup">Name:</label>
+    <input class="form-input" type="text" id="name-login" maxLength={50}
+        placeholder="Name"/>
+  </div>
+    <label for="email-login">Email:</label>
+    <input class="form-input" type="email" id="email-login" 
+    maxLength={50}
+        placeholder="example@email.com"/>
+  </div>
+ 
+  <div class="form-group">
+    <label for="password-login">Password:</label>
+    <input class="form-input" type="password" id="password-login" 
+    maxLength={50}
+        placeholder="Password"/>
+  </div>
+  
+  <div id="loginBtn" class="form-group">
+    <button class="btn btn-primary" type="submit">Login</button>
+  </div>
+</form>
+</div>
+</div> 
+
+<div class="column">
+<div class="card">
+<form class="form signup-form">
+  <div class="form-group">
+    <label for="password-signup">Name:</label>
+    <input class="form-input" type="text" id="name-signup" maxLength={50}
+        placeholder="Name"/>
+  </div>
+  <div class="form-group">
+    <label for="email-signup">Email:</label>
+    <input class="form-input" type="email" id="email-signup" maxLength={50}
+        placeholder="example@email.com"/>
+  </div>
+  <div class="form-group">
+    <label for="password-signup">Password:</label>
+    <input class="form-input" type="password" id="password-signup" maxLength={50}
+        placeholder="Password"/>
+  </div>
+  <div class="form-group">
+    <button class="btn btn-primary" type="submit">Signup</button>
+  </div>
+</form>
+</div>
+</div>
+</div>
+
+<script src="/js/login.js"></script>

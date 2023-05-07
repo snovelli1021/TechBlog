@@ -1,0 +1,40 @@
+/* Styling whole page color to help visually separate pages while coding. */
+* {
+  background-color: #419e6e;
+}
+/* Styling for dashboard page. */
+.createPostBtn {
+  background-color: #7c8da5;
+  border-color: #e0e1dc;
+  border-radius: 5px;
+  color: #1d2538;
+  margin-bottom: 1%;
+  margin-top: 1%;
+}
+
+#deletePostBtn {
+  background-color: #7c8da5;
+  border-color: #e0e1dc;
+  border-radius: 5px;
+  color: #1d2538;
+  margin-bottom: 1%;
+  margin-top: 1%;
+}
+
+.addCommentBtn {
+  background-color: #7c8da5;
+  border-color: #e0e1dc;
+  border-radius: 5px;
+  color: #1d2538;
+  margin-bottom: 1%;
+  margin-top: 1%;
+}
+
+.commentDeleteBtn {
+  background-color: #7c8da5;
+  border-color: #e0e1dc;
+  border-radius: 5px;
+  color: #1d2538;
+  margin-bottom: 1%;
+  margin-top: 1%;
+}

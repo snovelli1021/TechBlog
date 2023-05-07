@@ -1,79 +1,23 @@
-<h1> Welcome to the Tech Blog!</h1>
-{{!-- {{#each users as |user| }}
-<div class="row align-center mb-5">
-  <div class="col-md-6">
-    <h2>{{{get_emoji}}} {{user.name}}</h2>
-  </div>
-  <div class="col-md-6">
-    <h3><a href="mailto:{{user.email}}">{{user.email}}</a></h3>
-  </div>
-</div>
-{{/each}} --}}
- {{#if logged_in}}
+
+<head><link rel="stylesheet" href="/css/homepage.css"></head>
+
 <nav>
-    <button class="btn" id="Dashboard">Dashboard</button>
-    <button class="btn" id="logout">Logout</button>
+    {{!-- <button class="btn" id="Dashboard">Dashboard</button> --}}
+    
 </nav>
-  {{/if}}
- <div class="row">
-  <div class="column">
-<div class="card">
-<form class="form login-form">
-  <div class="form-group">
-    <label for="email-login">Email:</label>
-    <input class="form-input" type="email" id="email-login" 
-    maxLength={50}
-        placeholder="example@email.com"/>
-  </div>
- 
-  <div class="form-group">
-    <label for="password-login">Password:</label>
-    <input class="form-input" type="password" id="password-login" 
-    maxLength={50}
-        placeholder="Password"/>
-  </div>
-  <p id="formText">Please login or sign up.</p>
-  <div id="loginBtn" class="form-group">
-    <button class="btn btn-primary" type="submit">Login</button>
-  </div>
-</form>
-</div>
-</div> 
-
-<div class="column">
-<div class="card">
-<form class="form signup-form">
-  <div class="form-group">
-    <label for="password-signup">Name:</label>
-    <input class="form-input" type="text" id="name-signup" maxLength={50}
-        placeholder="Name"/>
-  </div>
-  <div class="form-group">
-    <label for="email-signup">Email:</label>
-    <input class="form-input" type="email" id="email-signup" maxLength={50}
-        placeholder="example@email.com"/>
-  </div>
-  <div class="form-group">
-    <label for="password-signup">Password:</label>
-    <input class="form-input" type="password" id="password-signup" maxLength={50}
-        placeholder="Password"/>
-  </div>
-  <div class="form-group">
-    <button class="btn btn-primary" type="submit">Signup</button>
-  </div>
-</form>
-</div>
-</div>
-</div>
-
-<div>
+{{#if logged_in}}
+<h2>Home</h2>
+<button class="btn" id="Dashboard">Dashboard</button>
+<div> 
 {{#each posts}}
 <h2>{{postTitle}}</h2>
 <p>{{postBody}}</p>
 {{/each}}
+
 </div>
 
+{{/if}}
 
-<script src="/js/login.js"></script>
+
 <script src="/js/logout.js"></script>
-<script src="../js/homepage.js"></scrip>
+<script src="../js/homepage.js"></script>

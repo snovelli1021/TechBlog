@@ -9,17 +9,28 @@
 </head>
 
 <body>
-  <header class="display-flex justify-space-between align-center p-2"></header>
-  <main class="container container-fluid mt-5">
-    {{{ body }}}
-  </main>
-  <footer>
-      
-  </footer>
-
+  <header class="display-flex justify-space-between align-center p-2">
+  <h1 id="title">Welcome to the Tech Blog!</h1>
+<nav>
   {{#if logged_in}}
+  <a href="/homepage"></a>
+  <button class="btn" id="logout">Logout</button>
   <script src="/js/logout.js"></script>
-  {{!-- <script src="/js/login.js"></script> --}}
+  {{else}}
+        <a id="login" href="/login">login</a>
+  {{/if}}
+</nav>
+</header>
+<main class="container container-fluid mt-5">
+    {{{ body }}}
+</main>
+
+<footer>
+      <p>footer</p>
+</footer>
+
+{{#if logged_in}}
+  <script src="/js/logout.js"></script>
   {{/if}}
 </body>
 
