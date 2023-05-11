@@ -3,8 +3,13 @@
 }
 
 p {
-  font-size: 50;
-  color: aliceblue;
+  color: #e0e1dc;
+  font-size: 18px;
+}
+
+h2 {
+  color: #475b74;
+  font-size: 30px;
 }
 
 .navbar {
@@ -32,6 +37,74 @@ p {
 
 .navLinks:hover {
   color: #7c8da5;
+}
+
+.card {
+  display: flex;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+  border-style: solid;
+  border-color: #475b74;
+  border-radius: 50%;
+  padding: 8%;
+  border-left-color: #e0e1dc;
+  z-index: 1100;
+}
+
+#formText {
+  font-size: 16px;
+}
+
+.form {
+  color: #e0e1dc;
+  font-size: 24px;
+  background-color: transparent;
+  width: 80%;
+}
+
+.form.signup-form {
+  color: #e0e1dc;
+  font-size: 24px;
+  background-color: transparent;
+  width: 80%;
+}
+
+.form-input {
+  border-style: solid;
+  border-color: #7c8da5;
+  background-color: #e0e1dc;
+  font-size: 14px;
+  border-width: 2px;
+  padding: 1%;
+  height: 32px;
+  width: 100%;
+  display: flex;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10%;
+  margin-top: 2%;
+}
+
+.form-group {
+  background-color: transparent;
+}
+
+/* Fix the button border color and try adding name input to login form to get button position correct. */
+.btn {
+  background-color: #475b74;
+  border-style: solid;
+  border-radius: 50px;
+  border-color: #e0e1dc;
+  border-width: 2px;
+  color: #e0e1dc;
+  margin-bottom: 1%;
+  margin-top: 1%;
+  font-size: 14px;
+  height: 60px;
+  width: 80px;
 }
 
 footer {

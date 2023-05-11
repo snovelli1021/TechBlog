@@ -1,50 +1,186 @@
 /* Styling for dashboard page. */
-.postCard {
+.newPostCard {
   display: flex;
-  width: 20%;
+  width: 40%;
   margin-left: auto;
   margin-right: auto;
   justify-content: space-between;
   border-style: solid;
   border-color: #475b74;
   border-radius: 50%;
-  padding: 8%;
+  padding: 4%;
   border-left-color: #e0e1dc;
   z-index: 1100;
+  margin-bottom: 2%;
+}
+
+@media screen and (max-width: 992px) {
+  .newPostCard {
+    width: 50%;
+    padding: 12%;
+  }
+}
+
+#post-title {
+  color: #1d2538;
+}
+
+.form-body {
+  border-style: solid;
+  border-color: #7c8da5;
+  background-color: #e0e1dc;
+  font-size: 14px;
+  border-width: 2px;
+  padding: 1%;
+  padding-bottom: 180px;
+  width: 98%;
+  display: flex;
+  border-radius: 5px;
+  margin-bottom: 4%;
+  margin-top: 2%;
+  word-wrap: break-word;
+  color: #1d2538;
+  resize: none;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 992px) {
+  .form-body {
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.allPostCards {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+  padding: 2%;
+  z-index: 1100;
+  margin-bottom: 2%;
+}
+.existingPostCard {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+  border-style: solid;
+  border-color: #e0e1dc;
+  padding: 2%;
+  z-index: 1100;
+  margin-bottom: 8%;
+}
+.postBodyText {
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word;
+  border-style: solid;
+  border-color: #7c8da5;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4%;
+  padding: 1%;
+}
+
+@media screen and (max-width: 992px) {
+  .postBodyText {
+    width: 90%;
+  }
+}
+
+.newCommentCard {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+  border-style: solid;
+  border-color: #7c8da5;
+  padding: 2%;
+  z-index: 1100;
+  margin-bottom: 1%;
+}
+
+@media screen and (max-width: 992px) {
+  .newCommentCard {
+    width: 90%;
+  }
+}
+
+#newCommentText {
+  color: #e0e1dc;
+}
+
+#commentBreak {
+  width: 95%;
+  height: 0;
+  border: 1px solid #7c8da5;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .createPostBtn {
-  background-color: #7c8da5;
+  background-color: #475b74;
+  border-style: solid;
+  border-radius: 50px;
   border-color: #e0e1dc;
-  border-radius: 5px;
-  color: #1d2538;
+  border-width: 2px;
+  color: #e0e1dc;
   margin-bottom: 1%;
   margin-top: 1%;
+  font-size: 14px;
+  height: 30px;
+  width: 140px;
 }
 
 #deletePostBtn {
-  background-color: #7c8da5;
+  background-color: #475b74;
+  border-style: solid;
+  border-radius: 50px;
   border-color: #e0e1dc;
-  border-radius: 5px;
-  color: #1d2538;
+  border-width: 2px;
+  color: #e0e1dc;
   margin-bottom: 1%;
   margin-top: 1%;
+  font-size: 14px;
+  height: 30px;
+  width: 140px;
 }
 
 .addCommentBtn {
-  background-color: #7c8da5;
+  background-color: #475b74;
+  border-style: solid;
+  border-radius: 50px;
   border-color: #e0e1dc;
-  border-radius: 5px;
-  color: #1d2538;
+  border-width: 2px;
+  color: #e0e1dc;
   margin-bottom: 1%;
   margin-top: 1%;
+  font-size: 14px;
+  height: 30px;
+  width: 140px;
 }
 
 .commentDeleteBtn {
-  background-color: #7c8da5;
+  background-color: #475b74;
+  border-style: solid;
+  border-radius: 50px;
   border-color: #e0e1dc;
-  border-radius: 5px;
-  color: #1d2538;
+  border-width: 2px;
+  color: #e0e1dc;
   margin-bottom: 1%;
   margin-top: 1%;
+  font-size: 14px;
+  height: 30px;
+  width: 140px;
 }
