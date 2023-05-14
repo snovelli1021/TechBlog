@@ -1,4 +1,4 @@
-/* Styling for dashboard page. */
+/* Styling for posts on dashboard page. */
 .newPostCard {
   display: flex;
   width: 40%;
@@ -64,6 +64,7 @@
   z-index: 1100;
   margin-bottom: 2%;
 }
+
 .existingPostCard {
   display: flex;
   flex-direction: column;
@@ -77,6 +78,7 @@
   z-index: 1100;
   margin-bottom: 8%;
 }
+
 .postBodyText {
   display: flex;
   flex-direction: column;
@@ -94,39 +96,6 @@
   .postBodyText {
     width: 90%;
   }
-}
-
-.newCommentCard {
-  display: flex;
-  flex-direction: column;
-  width: 30%;
-  margin-left: auto;
-  margin-right: auto;
-  justify-content: space-between;
-  border-style: solid;
-  border-color: #7c8da5;
-  padding: 2%;
-  z-index: 1100;
-  margin-bottom: 1%;
-}
-
-@media screen and (max-width: 992px) {
-  .newCommentCard {
-    width: 90%;
-  }
-}
-
-#newCommentText {
-  color: #e0e1dc;
-}
-
-#commentBreak {
-  width: 95%;
-  height: 0;
-  border: 1px solid #7c8da5;
-  display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .createPostBtn {
@@ -157,6 +126,31 @@
   width: 140px;
 }
 
+/* Styling for comments on dashboard page. */
+.newCommentCard {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+  border-style: solid;
+  border-color: #7c8da5;
+  padding: 2%;
+  z-index: 1100;
+  margin-bottom: 1%;
+}
+
+@media screen and (max-width: 992px) {
+  .newCommentCard {
+    width: 90%;
+  }
+}
+
+#newCommentText {
+  color: #e0e1dc;
+}
+
 .addCommentBtn {
   background-color: #475b74;
   border-style: solid;
@@ -171,7 +165,27 @@
   width: 140px;
 }
 
+.existingCommentCard {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+  border-style: solid;
+  border-color: #e0e1dc;
+  padding: 2%;
+  z-index: 1100;
+  margin-bottom: 8%;
+  padding-top: 1%;
+}
+
+.commentText {
+  margin-left: 2%;
+}
+
 .commentDeleteBtn {
+  float: right;
   background-color: #475b74;
   border-style: solid;
   border-radius: 50px;
@@ -180,7 +194,18 @@
   color: #e0e1dc;
   margin-bottom: 1%;
   margin-top: 1%;
+  margin-right: 2%;
   font-size: 14px;
   height: 30px;
   width: 140px;
+}
+
+#commentBreak {
+  width: 95%;
+  height: 0;
+  border: 1px solid #7c8da5;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5%;
 }

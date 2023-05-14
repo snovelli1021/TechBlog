@@ -9,23 +9,17 @@
 </head>
 
 <body>
+  {{!-- Main layout for the Tech Blog. --}}
   <header class="header">
     
       <nav class="navbar">
         <h1 id="title">Welcome to the Tech Blog!</h1>
-        {{!-- <button class="btn" id="login">Login</button>
-        <button class="btn" id="logout">Logout</button> --}}
         <a class="navLinks" id="login" href="/login">login</a>
         <a class="navLinks" id="logout" href="/login">logout</a>
         {{#if logged_in}}
         <a href="/homepage"></a>
-        {{!-- <button class="btn" id="logout">Logout</button> --}}
         <script src="/js/logout.js"></script>
         {{else}}
-        
-          {{!-- <a id="login" href="/login">login</a>
-          <a id="login" href="/login">logout</a>
-          <script src="/js/logout.js"></script> --}}
         {{/if}}
       </nav>
   </header>
@@ -35,6 +29,7 @@
   </main>
 
   <footer>
+    <hr id="footerBreak"></hr>
     <div className="footer">
       © 2023 Copyright: <p>Stephen Novelli 2023</p>
     </div>

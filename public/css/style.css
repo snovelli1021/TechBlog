@@ -8,8 +8,14 @@ p {
 }
 
 h2 {
+  color: #e0e1dc;
+  font-size: 40px;
+}
+
+h3 {
   color: #475b74;
   font-size: 30px;
+  text-shadow: 1px 1px rgb(208, 215, 175);
 }
 
 .navbar {

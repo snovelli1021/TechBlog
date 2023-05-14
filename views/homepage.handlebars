@@ -1,23 +1,25 @@
 
 <head><link rel="stylesheet" href="/css/homepage.css"></head>
 
-<nav>
-    {{!-- <button class="btn" id="Dashboard">Dashboard</button> --}}
-    
-</nav>
+{{!-- Renders all posts on the Homepage --}}
 {{#if logged_in}}
-<h2>Home</h2>
-<button class="btn" id="Dashboard">Dashboard</button>
-<div> 
-{{#each posts}}
-<h2>{{postTitle}}</h2>
-<p>{{postBody}}</p>
+    <h2>Home</h2>
+    <button class="btn" id="Dashboard">Dashboard</button>
+    {{#each posts}}
+    <div class="homepagePosts"> 
+    <h3>{{postTitle}}</h3>
+    <p>{{postBody}}</p>
+    </div>
+    {{/each}}
+{{/if}}
+
+{{#each comments}}
+   <p>{{commentBody}}</p>
 {{/each}}
 
-</div>
 
-{{/if}}
 
 
 <script src="/js/logout.js"></script>
 <script src="../js/homepage.js"></script>
+

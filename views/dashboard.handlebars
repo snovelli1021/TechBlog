@@ -5,6 +5,7 @@
 <nav>
     <button class="btn" id="home">Home</button>
 </nav>
+{{!-- Create a new post form. --}}
 <div class="column"></div>
 <div class="newPostCard">
 <form class="form post-form">
@@ -25,21 +26,22 @@
 </form>
 </div>
 
+{{!-- Renders all posts with a delete button. --}}
 <div class="allPostCards">
 {{#each posts as |post|}}
 <div class="existingPostCard">
 <div class="postBodyText">   
-<h2>{{post.postTitle}}</h2>
+<h3>{{post.postTitle}}</h3>
 <p >{{post.postBody}}</p>
 
 <form class="form2" data-id= "{{post.id}}">
     <button id="deletePostBtn" type="submit" >Delete Post!</button>
 </form>
 </div>
+{{!-- Create a new comment and delete comment form. --}}
 <div class="newCommentCard">
 <form class="newComment-form" data-id= "{{post.id}}">
     <label id="newCommentText" for="commentBody">New Comment:</label>
-    {{!-- <input class="comment-input" type="text" id="commentBody{{post.id}}"/> --}}
     <textarea id="commentBody{{post.id}}" maxLength= "5000" placeholder="What would you like to comment?" id="inputBody" type="text" class="form-body" ></textarea>
     <button class="addCommentBtn" type="submit">Add Comment</button>
 </form>
@@ -47,9 +49,9 @@
 </div>
 {{/each}}
 
-<div class="existingPostCard">
+<div class="existingCommentCard">
 {{#each comments as |comment|}}
-<p>{{comment.commentBody}}</p>
+<p class="commentText">{{comment.commentBody}}</p>
 <form class="deleteComment" data-id= "{{comment.id}}">
      <button class="commentDeleteBtn" type="submit">Delete Comment</button>
 </form>
